@@ -2,10 +2,14 @@
   "name": "genart_website",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch"
+    "start": "npm run build && npx http-server ."
   },
+  "keywords": [],
+  "author": "dave tran",
+  "license": "ISC",
   "devDependencies": {
     "typescript": "^5.0.0"
   }
