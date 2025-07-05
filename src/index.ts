@@ -8,5 +8,5 @@ greet("TypeScript User");
 // Example of DOM manipulation
 const appDiv = document.getElementById("app");
 if (appDiv) {
-  appDiv.innerHTML = "<h1>Welcome to your DAIDAI TypeScript Static Site!</h1>";
+  appDiv.innerHTML = "<h1>Welcome to GenArt AI Studio</h1>";
 }
