@@ -3,10 +3,288 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TypeScript Static Site</title>
+    <meta
+      name="description"
+      content="GenArt AI Studio - Transform text prompts into stunning AI-generated masterpieces. Create unique artwork with our intuitive text-to-image AI technology."
+    />
+    <meta name="author" content="Nevitech" />
+    <meta name="application-name" content="GenArt AI Studio" />
+    <meta property="og:title" content="GenArt AI Studio - AI Art Generator" />
+    <meta
+      property="og:description"
+      content="Create breathtaking, unique artwork using AI. Transform text into stunning masterpieces with our intuitive text-to-image technology."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GenArt AI Studio" />
+    <title>GenArt AI Studio - AI Art Generator</title>
+    <link rel="privacy-policy" href="./pages/privacy.html" />
+    <link rel="terms-of-service" href="./pages/terms.html" />
+    <style>
+      :root {
+        --primary-color: #4285f4;
+        --secondary-color: #34a853;
+        --background-color: #f8f9fa;
+      }
+
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--background-color);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 0.5rem;
+        }
+      }
+
+      .hero-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .hero-section img {
+        max-width: 200px;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        background: white;
+      }
+
+      .feature-card {
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-card object {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1rem;
+      }
+
+      nav {
+        background: white;
+        padding: 1rem 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      nav .container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .nav-button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .nav-button:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
+      }
+
+      .app-preview-container {
+        position: relative;
+        padding: 2rem 0;
+        background: var(--background-color);
+      }
+
+      .app-preview {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        margin: 0 auto;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .app-preview::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .app-preview::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      .app-preview::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 4px;
+      }
+
+      .app-preview img {
+        flex: 0 0 auto;
+        width: 300px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        scroll-snap-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .app-preview img:hover {
+        transform: scale(1.02);
+      }
+
+      .download-section {
+        text-align: center;
+        padding: 3rem 1rem;
+        background: white;
+      }
+
+      .download-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .download-button:hover {
+        background-color: #3367d6;
+      }
+
+      footer {
+        background: white;
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      footer nav {
+        margin-top: 1rem;
+        background: none;
+        box-shadow: none;
+      }
+
+      footer p {
+        margin: 0.5rem 0;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="hero-section">
+      <div class="container">
+        <img
+          src="./images/app-icon.webp"
+          alt="GenArt AI Studio Icon"
+          class="app-icon"
+        />
+        <h1>GenArt AI Studio</h1>
+        <p>Transform your imagination into stunning artwork with AI</p>
+      </div>
+    </header>
+
+    <nav>
+      <div class="container">
+        <a href="./pages/privacy.html" class="nav-button">Privacy Policy</a>
+        <a href="./pages/terms.html" class="nav-button">Terms of Service</a>
+        <a href="./pages/contact_us.html" class="nav-button">Contact Us</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="features">
+        <div class="feature-card">
+          <h3>🎨 Intuitive Text-to-Image</h3>
+          <p>
+            Simply type what you imagine, and our AI brings it to life in
+            seconds.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>✨ Vast Style Library</h3>
+          <p>
+            Explore dozens of artistic styles from photorealistic to anime and
+            abstract.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>🖼️ High-Quality Output</h3>
+          <p>
+            Create detailed and visually striking images ready to be shared or
+            printed.
+          </p>
+        </div>
+      </section>
+
+      <section class="app-preview-container">
+        <div class="container">
+          <div class="app-preview">
+            <img src="./images/screenshot1.webp" alt="GenArt App Screenshot 1" />
+            <img src="./images/screenshot2.webp" alt="GenArt App Screenshot 2" />
+            <img src="./images/screenshot3.webp" alt="GenArt App Screenshot 3" />
+          </div>
+        </div>
+      </section>
+
+      <section class="download-section">
+        <div class="container">
+          <h2>Get Started with GenArt AI Studio</h2>
+          <p>Available on Google Play Store for Android devices</p>
+          <a
+            href="https://play.google.com/store/apps/details?id=net.nevitech.genart"
+            target="_blank"
+          class="download-button"
+        >
+          Download Now
+        </a>
+        <div class="app-info">
+          <p>Developer: Nevitech</p>
+          <p>Content Rating: 12+</p>
+          <p>Regular updates with new features and improvements</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Nevitech. All rights reserved.</p>
+        <nav>
+          <a href="./pages/privacy.html" class="nav-button">Privacy Policy</a>
+          <a href="./pages/terms.html" class="nav-button">Terms of Service</a>
+          <a href="./pages/contact_us.html" class="nav-button">Contact Us</a>
+        </nav>
+      </div>
+    </footer>
     <script src="./dist/index.js"></script>
   </body>
 </html>
