@@ -44,6 +44,31 @@
         .container {
           padding: 0 0.5rem;
         }
+        
+        nav .container {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .nav-button {
+          width: 100%;
+          max-width: 300px;
+          padding: 0.75rem 1rem;
+          text-align: center;
+          font-size: 0.9rem;
+        }
+
+        .download-button {
+          width: 100%;
+          max-width: 300px;
+          padding: 0.75rem 1rem;
+          font-size: 1rem;
+        }
+
+        footer nav .container {
+          padding: 0;
+        }
       }
 
       .hero-section {
@@ -84,6 +109,63 @@
         margin-bottom: 1rem;
       }
 
+      .detailed-description {
+        background: white;
+        padding: 4rem 0;
+      }
+
+      .description-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: start;
+      }
+
+      .key-features {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .key-feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+        background: var(--background-color);
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .key-feature:hover {
+        transform: translateY(-2px);
+      }
+
+      .key-feature-icon {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+      }
+
+      .key-feature-text {
+        flex: 1;
+      }
+
+      .key-feature-text h4 {
+        margin: 0 0 0.5rem 0;
+        color: var(--primary-color);
+      }
+
+      .key-feature-text p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        .description-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+      }
+
       nav {
         background: white;
         padding: 1rem 0;
@@ -99,6 +181,7 @@
 
       .nav-button {
         display: inline-block;
+        min-width: 120px;
         padding: 0.75rem 1.5rem;
         background-color: var(--primary-color);
         color: white;
@@ -106,11 +189,17 @@
         border-radius: 25px;
         font-weight: 500;
         transition: all 0.3s ease;
+        text-align: center;
+        white-space: nowrap;
       }
 
       .nav-button:hover {
         background-color: var(--secondary-color);
         transform: translateY(-2px);
+      }
+
+      .nav-button:active {
+        transform: translateY(0);
       }
 
       .app-preview-container {
@@ -170,17 +259,25 @@
 
       .download-button {
         display: inline-block;
+        min-width: 200px;
         padding: 1rem 2rem;
         background-color: var(--primary-color);
         color: white;
         text-decoration: none;
         border-radius: 25px;
         font-weight: bold;
-        transition: background-color 0.3s;
+        transition: all 0.3s ease;
+        text-align: center;
+        white-space: nowrap;
       }
 
       .download-button:hover {
         background-color: #3367d6;
+        transform: translateY(-2px);
+      }
+
+      .download-button:active {
+        transform: translateY(0);
       }
 
       footer {
@@ -223,28 +320,71 @@
       </div>
     </nav>
 
-    <main>
-      <section class="features">
-        <div class="feature-card">
-          <h3>🎨 Intuitive Text-to-Image</h3>
-          <p>
-            Simply type what you imagine, and our AI brings it to life in
-            seconds.
-          </p>
-        </div>
-        <div class="feature-card">
-          <h3>✨ Vast Style Library</h3>
-          <p>
-            Explore dozens of artistic styles from photorealistic to anime and
-            abstract.
-          </p>
-        </div>
-        <div class="feature-card">
-          <h3>🖼️ High-Quality Output</h3>
-          <p>
-            Create detailed and visually striking images ready to be shared or
-            printed.
-          </p>
+    <main>      
+
+      <section class="detailed-description">
+        <div class="container">
+          <div class="description-grid">
+            <div class="about-app">
+              <h2>Unleash Your Inner Artist with GenArt</h2>
+              <p>Ever dreamed of creating breathtaking, unique artwork without needing complex skills or expensive software? With GenArt, you can transform simple text prompts into stunning AI-generated masterpieces in just a few taps!</p>
+              <p>Whether you're a seasoned artist looking for new inspiration or a complete beginner curious about the power of AI, our app makes art creation accessible, fun, and incredibly rewarding.</p>
+              
+              <h3>How It Works - Art Made Simple:</h3>
+              <ol>
+                <li><strong>Describe Your Vision:</strong> Type a few words or a phrase describing what you want to create (e.g., "a mystical forest at twilight," "a futuristic cityscape in neon," "a portrait of a cat wearing a crown"). The more descriptive, the better!</li>
+                <li><strong>Choose Your Style:</strong> Select from a vast library of artistic styles – from photorealistic and cinematic to anime, fantasy, oil painting, pixel art, and more!</li>
+                <li><strong>Tap Generate:</strong> Hit the button and watch as our advanced AI brings your ideas to life in seconds!</li>
+                <li><strong>Refine & Amaze:</strong> Not quite perfect? Tweak your prompt, try different styles, or use advanced options until you get your dream image.</li>
+              </ol>
+            </div>
+
+            <div class="key-features">
+              <h3>Key Features</h3>
+              <div class="key-feature">
+                <span class="key-feature-icon">🎨</span>
+                <div class="key-feature-text">
+                  <h4>Intuitive Text-to-Image</h4>
+                  <p>Simply type what you imagine, and our AI does the rest. No artistic skills required!</p>
+                </div>
+              </div>
+              <div class="key-feature">
+                <span class="key-feature-icon">✨</span>
+                <div class="key-feature-text">
+                  <h4>Vast Style Library</h4>
+                  <p>Explore dozens of artistic styles from photorealistic to anime, fantasy, oil painting, watercolor, and more!</p>
+                </div>
+              </div>
+              <div class="key-feature">
+                <span class="key-feature-icon">⚡</span>
+                <div class="key-feature-text">
+                  <h4>Fast Generation</h4>
+                  <p>Get your artwork in seconds, not minutes.</p>
+                </div>
+              </div>
+              <div class="key-feature">
+                <span class="key-feature-icon">🖼️</span>
+                <div class="key-feature-text">
+                  <h4>High-Quality Output</h4>
+                  <p>Create detailed and visually striking images ready to be shared or printed.</p>
+                </div>
+              </div>
+              <div class="key-feature">
+                <span class="key-feature-icon">💾</span>
+                <div class="key-feature-text">
+                  <h4>Save & Share Easily</h4>
+                  <p>Download your art in high resolution or share directly to social media platforms.</p>
+                </div>
+              </div>
+              <div class="key-feature">
+                <span class="key-feature-icon">🆕</span>
+                <div class="key-feature-text">
+                  <h4>Regular Updates</h4>
+                  <p>We're constantly adding new styles, features, and improving our AI models.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
