@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -44,7 +44,7 @@
         .container {
           padding: 0 0.5rem;
         }
-        
+
         nav .container {
           flex-direction: column;
           align-items: center;
@@ -282,7 +282,10 @@
       }
 
       .download-button {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
         min-width: 200px;
         padding: 1rem 2rem;
         background-color: var(--primary-color);
@@ -298,6 +301,39 @@
       .download-button:hover {
         background-color: #3367d6;
         transform: translateY(-2px);
+      }
+
+      .download-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      .store-download {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .store-icon-google {
+        width: 8rem;
+        height: 8rem;
+        flex: 0 0 auto;
+      }
+
+      .store-icon-apple {
+        width: 3rem;
+        height: 3.5rem;
+        flex: 0 0 auto;
+      }
+
+      .store-download .download-button {
+        min-width: 260px;
+        padding: 1.2rem 2.5rem;
+        font-size: 1.05rem;
       }
 
       .download-button:active {
@@ -344,22 +380,47 @@
       </div>
     </nav>
 
-    <main>      
-
+    <main>
       <section class="detailed-description">
         <div class="container">
           <div class="description-grid">
             <div class="about-app">
               <h2>Unleash Your Inner Artist with GenArt</h2>
-              <p>Ever dreamed of creating breathtaking, unique artwork without needing complex skills or expensive software? With GenArt, you can transform simple text prompts into stunning AI-generated masterpieces in just a few taps!</p>
-              <p>Whether you're a seasoned artist looking for new inspiration or a complete beginner curious about the power of AI, our app makes art creation accessible, fun, and incredibly rewarding.</p>
-              
+              <p>
+                Ever dreamed of creating breathtaking, unique artwork without
+                needing complex skills or expensive software? With GenArt, you
+                can transform simple text prompts into stunning AI-generated
+                masterpieces in just a few taps!
+              </p>
+              <p>
+                Whether you're a seasoned artist looking for new inspiration or
+                a complete beginner curious about the power of AI, our app makes
+                art creation accessible, fun, and incredibly rewarding.
+              </p>
+
               <h3>How It Works - Art Made Simple:</h3>
               <ol>
-                <li><strong>Describe Your Vision:</strong> Type a few words or a phrase describing what you want to create (e.g., "a mystical forest at twilight," "a futuristic cityscape in neon," "a portrait of a cat wearing a crown"). The more descriptive, the better!</li>
-                <li><strong>Choose Your Style:</strong> Select from a vast library of artistic styles – from photorealistic and cinematic to anime, fantasy, oil painting, pixel art, and more!</li>
-                <li><strong>Tap Generate:</strong> Hit the button and watch as our advanced AI brings your ideas to life in seconds!</li>
-                <li><strong>Refine & Amaze:</strong> Not quite perfect? Tweak your prompt, try different styles, or use advanced options until you get your dream image.</li>
+                <li>
+                  <strong>Describe Your Vision:</strong> Type a few words or a
+                  phrase describing what you want to create (e.g., "a mystical
+                  forest at twilight," "a futuristic cityscape in neon," "a
+                  portrait of a cat wearing a crown"). The more descriptive, the
+                  better!
+                </li>
+                <li>
+                  <strong>Choose Your Style:</strong> Select from a vast library
+                  of artistic styles – from photorealistic and cinematic to
+                  anime, fantasy, oil painting, pixel art, and more!
+                </li>
+                <li>
+                  <strong>Tap Generate:</strong> Hit the button and watch as our
+                  advanced AI brings your ideas to life in seconds!
+                </li>
+                <li>
+                  <strong>Refine & Amaze:</strong> Not quite perfect? Tweak your
+                  prompt, try different styles, or use advanced options until
+                  you get your dream image.
+                </li>
               </ol>
             </div>
 
@@ -369,14 +430,20 @@
                 <span class="key-feature-icon">🎨</span>
                 <div class="key-feature-text">
                   <h4>Intuitive Text-to-Image</h4>
-                  <p>Simply type what you imagine, and our AI does the rest. No artistic skills required!</p>
+                  <p>
+                    Simply type what you imagine, and our AI does the rest. No
+                    artistic skills required!
+                  </p>
                 </div>
               </div>
               <div class="key-feature">
                 <span class="key-feature-icon">✨</span>
                 <div class="key-feature-text">
                   <h4>Vast Style Library</h4>
-                  <p>Explore dozens of artistic styles from photorealistic to anime, fantasy, oil painting, watercolor, and more!</p>
+                  <p>
+                    Explore dozens of artistic styles from photorealistic to
+                    anime, fantasy, oil painting, watercolor, and more!
+                  </p>
                 </div>
               </div>
               <div class="key-feature">
@@ -390,21 +457,30 @@
                 <span class="key-feature-icon">🖼️</span>
                 <div class="key-feature-text">
                   <h4>High-Quality Output</h4>
-                  <p>Create detailed and visually striking images ready to be shared or printed.</p>
+                  <p>
+                    Create detailed and visually striking images ready to be
+                    shared or printed.
+                  </p>
                 </div>
               </div>
               <div class="key-feature">
                 <span class="key-feature-icon">💾</span>
                 <div class="key-feature-text">
                   <h4>Save & Share Easily</h4>
-                  <p>Download your art in high resolution or share directly to social media platforms.</p>
+                  <p>
+                    Download your art in high resolution or share directly to
+                    social media platforms.
+                  </p>
                 </div>
               </div>
               <div class="key-feature">
                 <span class="key-feature-icon">🆕</span>
                 <div class="key-feature-text">
                   <h4>Regular Updates</h4>
-                  <p>We're constantly adding new styles, features, and improving our AI models.</p>
+                  <p>
+                    We're constantly adding new styles, features, and improving
+                    our AI models.
+                  </p>
                 </div>
               </div>
             </div>
@@ -415,9 +491,18 @@
       <section class="app-preview-container">
         <div class="container">
           <div class="app-preview">
-            <img src="./images/screenshot1.webp" alt="GenArt App Screenshot 1" />
-            <img src="./images/screenshot2.webp" alt="GenArt App Screenshot 2" />
-            <img src="./images/screenshot3.webp" alt="GenArt App Screenshot 3" />
+            <img
+              src="./images/screenshot1.webp"
+              alt="GenArt App Screenshot 1"
+            />
+            <img
+              src="./images/screenshot2.webp"
+              alt="GenArt App Screenshot 2"
+            />
+            <img
+              src="./images/screenshot3.webp"
+              alt="GenArt App Screenshot 3"
+            />
           </div>
         </div>
       </section>
@@ -425,18 +510,42 @@
       <section class="download-section">
         <div class="container">
           <h2>Get Started with GenArt AI Studio</h2>
-          <p>Available on Google Play Store for Android devices</p>
-          <a
-            href="https://play.google.com/store/apps/details?id=net.nevitech.genart"
-            target="_blank"
-          class="download-button"
-        >
-          Download Now
-        </a>
-        <div class="app-info">
-          <p>Developer: Nevitech</p>
-          <p>Content Rating: 12+</p>
-          <p>Regular updates with new features and improvements</p>
+          <p>Available on Google Play Store and the App Store</p>
+          <div class="download-buttons">
+            <div class="store-download">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Google Play Store icon"
+                class="store-icon-google"
+              />
+              <a
+                href="https://play.google.com/store/apps/details?id=net.nevitech.genart"
+                target="_blank"
+                class="download-button"
+              >
+                Download on Google Play
+              </a>
+            </div>
+            <div class="store-download">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                alt="Apple App Store icon"
+                class="store-icon-apple"
+              />
+              <a
+                href="https://apps.apple.com/us/app/genart-ai-studio/id6755963035"
+                target="_blank"
+                class="download-button"
+              >
+                Download on the App Store
+              </a>
+            </div>
+          </div>
+          <div class="app-info">
+            <p>Developer: Nevitech</p>
+            <p>Content Rating: 12+</p>
+            <p>Regular updates with new features and improvements</p>
+          </div>
         </div>
       </section>
     </main>
